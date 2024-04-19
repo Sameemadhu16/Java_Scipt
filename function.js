@@ -42,3 +42,38 @@ myLocalScope();
 
 
 //Global vs Local scope in function
+var outerWear = "T-shirt";
+function myOutfit(){
+    var outerWear = "Shirt";
+    return outerWear;
+}
+console.log(myOutfit()) //LOacl scope variable
+console.log(outerWear) //Global scope variable
+
+//Return a value from a function with return
+function minusFive(num){
+    return num - 5;
+}
+console.log(minusFive(20));
+console.log(minusFive(56));
+
+//Understandin undefined value returned from a function
+
+//Assignment with a return value
+var changed = 0;
+function change(num){
+    return (num * 5)/2;
+}
+changed = change(20);
+console.log(changed)
+
+//Stand in line
+function nextInLine(arr , item){
+    arr.push(item); // push item in the end
+    return arr.shift(); //pop element of the begining
+}
+var testArr = [1,2,3,4,5];
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr , 6));
+console.log("After: " + JSON.stringify(testArr));
+
