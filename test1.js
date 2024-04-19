@@ -27,3 +27,25 @@ console.log(isLess(30,60));
 console.log(isLess(40,20));
 
 //Returning early pattern from functions
+
+//Generate random fractions
+//Genarate random whole numaber
+function randomWholeNum(){
+    return Math.floor(Math.random()*100);
+}
+console.log(randomWholeNum())
+
+//Generate random whole number within a range
+function randomRange(myMin,myMax){
+    return Math.floor(Math.random()* (myMax - myMin + 1)) + myMin
+}
+var myRandom = randomRange(5,15);
+console.log(myRandom)
+
+//Use the parseInt function
+function convertToInteger(str){
+    return parseInt(str , 2);
+}
+console.log(convertToInteger("10011"))
+
+//Use multiple conditional operator(ternary)
