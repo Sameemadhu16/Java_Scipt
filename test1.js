@@ -49,3 +49,49 @@ function convertToInteger(str){
 console.log(convertToInteger("10011"))
 
 //Use multiple conditional operator(ternary)
+function checkSign(num){
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+console.log(checkSign(10))
+console.log(checkSign(0))
+console.log(checkSign(-10))
+
+//Difference between var and let keywords
+//var is gobal scope and let is local scope 
+//In let cannont define same variable name in more than one in the scope
+function checkScope(){
+    "use strict";
+    let i = "function scope";
+    if(true){
+        let i ="block scope";
+        console.log("block scope i is: ",i);
+    }
+    console.log("Function scope i is:",i);
+}
+checkScope();
+
+//Declare a read only variable with the const keyword
+//IF ypu declare a varible with the const keyword you cannot reassign it afterwards
+//const are in capital letters
+function printManyTimes(str){
+    "use strict";
+    const SENTENCE = str + " is cool";
+    for(let i = 0; i<str.length; i+=2){
+        console.log(SENTENCE);
+    }
+}
+printManyTimes("Sameera_Mdhuranga")
+
+//Mutate and array declare with const
+const s = [5,7,3];
+function editInPlace(){
+    "use strict";
+    //s = [2,4,6];
+    s[0] = 2;
+    s[1] = 4;
+    s[2] = 6;
+}
+editInPlace();
+console.log(s)
+
+//Prevent object mutation
