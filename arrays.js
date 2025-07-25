@@ -44,3 +44,17 @@ console.log(ourArray)
 //Shopping list
 var myList = [["cereal", 3],["milk",2],["bananas", 3]];
 console.log(myList)
+
+var fruits = new Array("apple", "mango", "banana");
+console.log(fruits[0]);
+
+var arr = new Array(5);
+arr[0] = 10;
+arr[1] = 12;
+arr[2] = 45;
+arr[3] = 56;
+arr[4] = 67;
+
+for (var i = 0; i < 5; i++) {
+  console.log(arr[i]);  
+}
