@@ -6,12 +6,18 @@
     <script language="javascript" type="text/javascript">
         var num = parseInt(prompt("Enter a number", "Enter...")); //5432
         var count = 0;
+        var actualPin = "2345";
+        var pin;
         do{
-            num = Math.trunc(num/10);
-            count++;
-        } while (num > 0)
-        document.write("Digit : " + count);
-
+            pin = prompt('Enter your pin....', "Enter...");
+            count ++;
+        } while (pin != actualPin && count < 3);
+        if(pin == actualPin){
+            document.write("Welcome USer");
+        }else{
+            document.write("Account Locked");
+        }
+        //document.write("Digit : " + count);
     </script>
 
 </body>
