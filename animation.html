@@ -1,0 +1,36 @@
+<html>
+
+</html>
+
+<head>
+    <title>Javascript Events</title>
+    <script >
+        var arr = new Array('https://via.placeholder.com/300x200/ff0000/ffffff?text=Image+1',
+                'https://via.placeholder.com/300x200/00ff00/ffffff?text=Image+2',
+                'https://via.placeholder.com/300x200/0000ff/ffffff?text=Image+3')
+        var i = 1;
+        var ref;
+
+        function picLibrary(){
+            document.images[0].src = arr[i];
+            i++
+            if(i >= 3){
+                i = 0
+            }
+        }
+
+        function start(){
+            ref = setInterval("picLibrary()", 1000)
+        }
+
+        function stop(){
+            clearInterval(ref);
+        }
+    </script>
+</head>
+
+<body onload="start()">
+    <img src="https://via.placeholder.com/300x200/ff0000/ffffff?text=Image+1" name="img" onmouseover="stop()" onmouseout="start()">
+</body>
+
+</html>
