@@ -1,0 +1,27 @@
+<html>
+
+</html>
+
+<head>
+    <title>Javascript Events</title>
+    <script language="javascript" type="text/javascript">
+        function MouseOver() {
+            document.images['img'].src = '1.jpg'
+        }
+
+        function MouseOut() {
+            document.images['img'].src = "2.jpg"
+        }
+
+        function Load() {
+            document.images['img'].src = "1.jpg"
+        }
+
+    </script>
+</head>
+
+<body onload="Load()">
+    <img name="img"  onmouseover="MouseOver()" onmouseout="MouseOut()">
+</body>
+
+</html>
