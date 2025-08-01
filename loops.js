@@ -44,3 +44,6 @@ do{
 }while(i<5)
 console.log(myArry);
 
+// we use break key word to terminate the program which i need to to terminate
+// we use continue key word to skip steps
+// these are controls the execution of loops
