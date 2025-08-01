@@ -4,13 +4,17 @@
 </head>
 <body>
     <script language="javascript" type="text/javascript">
-        var i;
-        var product = 1;
-        var num = parseInt(prompt("Enter a number", "Enter..."));
-        for (i = 1; i <= num; i++) {
-            product = product * i;
+        var num = parseInt(prompt("Enter a number", "Enter...")); //5432
+        var count = 0;
+        while (num > 0){
+            num = Math.trunc(num/10);
+            count++;
         }
-        document.write("Factorial:" + product);
+        document.write("Digit : " + count);
+
+
+
     </script>
+
 </body>
 </html>
