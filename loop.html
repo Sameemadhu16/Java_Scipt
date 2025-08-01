@@ -6,13 +6,11 @@
     <script language="javascript" type="text/javascript">
         var num = parseInt(prompt("Enter a number", "Enter...")); //5432
         var count = 0;
-        while (num > 0){
+        do{
             num = Math.trunc(num/10);
             count++;
-        }
+        } while (num > 0)
         document.write("Digit : " + count);
-
-
 
     </script>
 
